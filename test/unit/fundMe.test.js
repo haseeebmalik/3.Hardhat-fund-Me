@@ -23,7 +23,7 @@ const { developmentChain } = require("../../helper-hardhat-config")
         //This command will deploy all our contracts in our deploy folder on hardhat
         await deployments.fixture(["all"])
         //This will get the recently deployed FundMe contract from
-        //given deployed account.
+        //given deployed account and connect it to deployer
         fundMe = await ethers.getContract("FundMe", deployer)
         mockV3Aggregator = await ethers.getContract(
             "MockV3Aggregator",
@@ -34,6 +34,8 @@ const { developmentChain } = require("../../helper-hardhat-config")
         it("set the aggregator address correctly", async function () {
             const response = await fundMe.getPriceFeed()
             assert.equal(response, mockV3Aggregator.address)
+            
+          
         })
     })
     describe("fund", async function () {

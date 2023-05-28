@@ -21,7 +21,7 @@ test networks.
 Here we also do a brief testing of the contract.
 Here we also see a good way to debug the solidity test and contract.
 Here we also see some good practices for writing a good solidity contract.
-Here we also learn how to minimize gas cost.By updating and reading the state variable as possible.
+Here we also learn how to minimize gas cost.By updating and reading the state variable as less as possible.
 
 There are three main gas optamization techniques:
   1: do less read and update state variables.
